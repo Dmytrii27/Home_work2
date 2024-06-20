@@ -61,13 +61,33 @@ position: relative;top: 7px;}
 .photo{height: 500px;
 width: 400px; float: right; margin-right: 570px;
 position: relative;
-top: -190px;
-border-radius: 15%;}
+top: -200px;
+border-radius: 15%;
+transition: 1s;}
 .photo2{height: 500px;
     width: 400px;float: right;
 position: relative;left: 822px;
-position: relative;top: -350px;
-border-radius: 15%;}
+position: relative;top: -380px;
+border-radius: 15%;
+transition: 1s;}
+.me:hover .photo{
+    opacity: 0.4;
+    filter: blur(3px);
+}
+.me .photo:hover{
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1.13);
+}
+.me:hover .photo2{
+    opacity: 0.4;
+    filter: blur(3px);}
+    .me .photo2:hover{
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1.13);}
+    
+
 </style>
 
 
@@ -76,12 +96,12 @@ border-radius: 15%;}
 <body>
     <section class="header wrap">
         <header class="header">
-            <a href="file:///C:/Users/dmytr/Downloads/MERN/Home_work2/portfolio.html">
+            <a href="file:///C:/Users/dmytr/Downloads/MERN/Home_work3/Home_work2/portfolio.html">
                 <img src="C:\Users\dmytr\OneDrive\Obrazy\Zrzuty ekranu\logo.png.png" class="logo"
-            >
+                >
             <nav>
                 <ul class="menu">
-                    <li><a href="file:///C:/Users/dmytr/Downloads/MERN/Home_work2/portfolio.html">About me</a></li>
+                    <li><a href="file:///C:/Users/dmytr/Downloads/MERN/Home_work3/Home_work2/portfolio.html">About me</a></li>
                     <li><a href="#">Experience</a></li>
                     <li><a href="#">Servises</a></li>
                     <li><a href="#">Contact</a></li>
@@ -92,12 +112,14 @@ border-radius: 15%;}
     <div class="me">
       
         <img src="C:\Users\dmytr\Downloads\IMG_7061.PNG" class="photo">
+    
             <p>I'm Dmytrii.</p>
             <p>Full-Stack Developer.</p>
             <p>Fronted Developer.</p>
+           <div> <img src= "C:\Users\dmytr\Downloads\IMG_7129.png" class="photo2"></div>
     </div>
     
-    <div><img src= "C:\Users\dmytr\Downloads\IMG_7129.png" class="photo2"></div>
+    
    
 
    
