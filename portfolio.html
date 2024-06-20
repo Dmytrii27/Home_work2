@@ -41,9 +41,15 @@
     }
     .menu li a{
         color:white ; text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s
     }
     .menu li a:hover{
-        color: grey;
+        background-size: 100% 2px;
+        color: white;
     }
     .logo{height: 80px;
     width: 60px;position: relative;right: -60px;
@@ -86,7 +92,15 @@ transition: 1s;}
     opacity: 1;
     filter: blur(0);
     transform: scale(1.13);}
-    
+    .menu a:after{
+        display: block;
+	position: absolute;
+	left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: #00a650; /*задаём цвет линии*/
+	content: "";
+	transition: width 0.3s ease-out; /*задаём время анимации*/}
 
 </style>
 
