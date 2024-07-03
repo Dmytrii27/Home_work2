@@ -6,107 +6,13 @@
 
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./style.css"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Patua+One&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Patua+One&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 
-<style>
-          *{font-family: "Roboto", sans-serif;}   
-    body{background-color: black;}
-    .header{
-   
-        display: flex;
-        align-items: center;
-        justify-content: space-between !important;
-        width: 100%;
-        padding: 40px 5px;
-        box-sizing: border-box;
-        max-width: 1330px;
-        position: relative;top: -30px;
-       
-       font-size: x-large;
-    }
-       
-       .header nav{margin-left: 5px !important;
-        position: relative;right: -140px; }
-    .menu{display: flex;
-    list-style: none;
-    }
-    .menu li{
-        margin-left: 44px;
-        margin-right: 40px;
-        
-    }
-    .menu li a{
-        color:white ; text-decoration: none;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .3s
-    }
-    .menu li a:hover{
-        background-size: 100% 2px;
-        color: white;
-    }
-    .logo{height: 80px;
-    width: 60px;position: relative;right: -60px;
-position: relative;top: 7px;}
-    .me{color: white;
-       
-    margin-top: 80px;}
-    
-   .me p{font-family: "Source Sans 3", sans-serif;
-   font-size: xx-large;
-   margin-left: 180px;
-   position: relative;top: -30px;
- bottom: 30%;
-}
-.photo{height: 500px;
-width: 400px; float: right; margin-right: 570px;
-position: relative;
-top: -200px;
-border-radius: 15%;
-transition: 1s;}
-.photo2{height: 500px;
-    width: 400px;float: right;
-position: relative;left: 822px;
-position: relative;top: -380px;
-border-radius: 15%;
-transition: 1s;}
-.me:hover .photo{
-    opacity: 0.4;
-    filter: blur(3px);
-}
-.me .photo:hover{
-    opacity: 1;
-    filter: blur(0);
-    transform: scale(1.13);
-}
-.me:hover .photo2{
-    opacity: 0.4;
-    filter: blur(3px);}
-    .me .photo2:hover{
-    opacity: 1;
-    filter: blur(0);
-    transform: scale(1.13);}
-    .menu a:after{
-        display: block;
-	position: absolute;
-	left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
-	width: 0;/*задаём длинну линии до наведения курсора*/
-	height: 2px; /*задаём ширину линии*/
-	background-color: #00a650; /*задаём цвет линии*/
-	content: "";
-	transition: width 0.3s ease-out; /*задаём время анимации*/}
-
-</style>
-
-
-
-    
 <body>
     <section class="header wrap">
         <header class="header">
@@ -123,15 +29,29 @@ transition: 1s;}
             </nav>
         </header>
     </section>
-    <div class="me">
-      
-        <img src="C:\Users\dmytr\Downloads\IMG_7061.PNG" class="photo">
     
-            <p>I'm Dmytrii.</p>
-            <p>Full-Stack Developer.</p>
-            <p>Fronted Developer.</p>
+    <section class="me2">
+        <h1 class="title">
+          <span>Hi, nice</span>
+          <span>to see</span>
+          <span>you here</span>
+        </h1>
+        
+        <h2 class="title">
+          <span>I'm Dmytrii.</span>
+          <span>Full-Stack</span>
+          <span>Developer.</span>
+          <span>Fronted</span>
+          <span>Developer.</span>
+          
+          
+        </h2>
+      </section>
+      <div class="me">
+        <img src="C:\Users\dmytr\Downloads\IMG_7061.PNG" class="photo">
            <div> <img src= "C:\Users\dmytr\Downloads\IMG_7129.png" class="photo2"></div>
     </div>
+   
     
     
    

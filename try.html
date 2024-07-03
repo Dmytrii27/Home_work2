@@ -1,0 +1,95 @@
+<section class="container">
+    <h1 class="title">
+      <span>Hi, nice</span>
+      <span>to see</span>
+      <span>you here</span>
+    </h1>
+    
+    <h2 class="title">
+      <span>This is</span>
+      <span>a long</span>
+      <span>sub title</span>
+      
+      
+    </h2>
+  </section>
+  <span class="usechrome">Use Chrome for a better experience</span>
+  <style>
+   @keyframes titleAnimation {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    }
+    20% {
+        transform: translateY(0);
+        opacity: 1;
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    }
+    80% {
+        transform: translateY(0);
+        opacity: 1;
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    }
+    100% {
+        transform: translateY(50px);
+        opacity: 0;
+        -webkit-clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+        clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+    }
+}
+
+h1 span {
+    font-size: 45px;
+    text-transform: uppercase;
+    float: left;
+    color: #ffffff;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: titleAnimation 3s ease;
+}
+
+h1 span:first-child {
+    animation-delay: 0.6s;
+}
+
+h1 span:last-child {
+    color: #ffe221;
+    animation-delay: 0.5s;
+}
+
+h2 {
+    font-size: 45px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+}
+
+h2 span {
+    float: left;
+    color: #ffffff;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: rotate 1s linear infinite;
+    /*animation: titleAnimation 3s ease;*/
+}
+
+h2 span:first-child {
+    animation-delay: 4.1s;
+}
+
+h2 span:last-child {
+    color: #ffe221;
+    animation-delay: 4.0s; /* Adjust the delay as needed */
+}
+
+/* Додаткові стилі для зупинки анімації на останньому кадрі */
+h1 span:last-child, h2 span:last-child {
+    animation-fill-mode: forwards;}

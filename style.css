@@ -1,0 +1,226 @@
+
+          *{font-family: "Roboto", sans-serif;}   
+    body{background-color: black;}
+    .header{
+   
+        display: flex;
+        align-items: center;
+        justify-content: space-between !important;
+        width: 100%;
+        padding: 40px 5px;
+        box-sizing: border-box;
+        max-width: 1330px;
+        position: relative;top: -30px;
+       
+       font-size: x-large;
+    }
+       
+       .header nav{margin-left: 5px !important;
+        position: relative;right: -140px; }
+    .menu{display: flex;
+    list-style: none;
+    }
+    .menu li{
+        margin-left: 44px;
+        margin-right: 40px;
+        
+    }
+    .menu li a{
+        color:white ; text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s
+    }
+    .menu li a:hover{
+        background-size: 100% 2px;
+        color: white;
+    }
+    .logo{height: 80px;
+    width: 60px;position: relative;right: -60px;
+position: relative;top: 7px;}
+    .me2{color: white;
+       
+    margin-top: 80px;}
+    
+   .me2{font-family: "Source Sans 3", sans-serif;
+   font-size: xx-large;
+   margin-left: 142px;
+   position: relative;top: -30px;
+ bottom: 30%;
+}
+.photo{height: 500px;
+width: 400px; float: right; margin-right: 570px;
+position: relative;
+top: -360px;
+border-radius: 15%;
+transition: 1s;}
+.photo2{height: 500px;
+    width: 400px;float: right;
+position: relative;left: 822px;
+position: relative;top: -285px;
+border-radius: 15%;
+transition: 1s;}
+.me:hover .photo{
+    opacity: 0.4;
+    filter: blur(3px);
+    
+   
+}
+.me .photo:hover{
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1.13);
+   
+}
+.me:hover .photo2{
+    opacity: 0.4;
+    filter: blur(3px);}
+    .me .photo2:hover{
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1.13);
+}
+    .menu a:after{
+        display: block;
+	position: absolute;
+	left: 0; /*можна поміняти на  right:0; */
+	width: 0;/*довжина лінії до наведення на неї курсора*/
+	height: 2px; /*ширина лінії*/
+	background-color: #00a650; /*колір лінії*/
+	content: "";
+	transition: width 0.3s ease-out; /*час для анімації*/}
+
+    @import 'https://fonts.googleapis.com/css?family=Baloo+Paaji';
+
+    $primary-color: #1e90ff ;
+    $secondary-color: #ffe221;
+    $tertiary-color: #ffffff;
+      
+    
+    body{
+        font-family: 'Baloo Paaji', cursive;
+        background: $primary-color;
+        display: flex;
+        justify-content:right;
+        align-items:right;
+      }
+      
+    .container{
+      width: 200px;
+      height: 120px;
+      position: relative; right: 800px;
+    }
+    
+    h1, h2{
+      font-size: 45px;
+      text-transform: uppercase;
+      
+      
+      span{
+        width: 100%;
+        float: left;
+        color: $tertiary-color;
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+        transform: translateY(-50px);
+        opacity: 0;
+        animation-name: titleAnimation;
+        animation-timing-function:ease;
+       animation-duration: 3s;
+       
+      }
+    
+    h1 span{
+      animation-delay: 0.6s;}
+      
+     
+    
+      &:first-child{
+        animation-delay: 0.7s;
+       
+      }
+    
+      &:last-child{
+        color: $secondary-color;
+        animation-delay: 0.5s;
+       
+      }
+    }
+    
+    h2{ 
+      top: 0;
+      position: absolute;
+      
+      
+      
+      span{
+        animation-delay: 4.1s;
+        -webkit-animation-fill-mode: forwards;}
+        
+       
+    
+        &:first-child{
+          animation-delay: 4.2s;
+          
+    
+        }
+    
+        &:last-child{
+          color: $secondary-color;
+          animation-delay: -4.2;
+         
+         
+        }
+        
+        
+    }
+}
+    .usechrome{
+      font-size: 10px;
+      color: #fff;
+      font-family: helvetica, arial;
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      left: 0;
+    }
+
+    
+    @keyframes titleAnimation {
+        0% {
+          transform: translateY(-50px);
+          opacity: 0;
+          -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+          clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+      }
+      20% {
+          transform: translateY(0);
+          opacity: 1;
+          -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+          clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+      }
+      80% {
+           transform: translateY(0);
+           opacity: 1;
+          -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+          clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+      }
+      100% {
+           transform: translateY(50px);
+           opacity: 0;
+          -webkit-clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+          clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+         
+          }
+     
+      
+      
+      
+    
+    }
+
+
+
