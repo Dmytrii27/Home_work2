@@ -1,6 +1,17 @@
-/*
+
+
+
+
 *{font-family: "Roboto", sans-serif;}   
-body{background-color: black;}
+body{background-color: black;
+margin-left: 0;
+margin-right: 0;
+width: 100%;
+height: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
 .header{
 
     display: flex;
@@ -50,47 +61,77 @@ margin-left: 142px;
 position: relative;top: -30px;
 bottom: 30%;
 }
+
 .photo{height: 500px;
 width: 400px; float: right; margin-right: 570px;
 position: relative;
 top: -360px;
-border-radius: 15%;
-transition: 1s;}
+border-radius: 17%;
+transition: 1s;
+animation: moveFromBottom 3.7s forwards;
+}
 .photo2{height: 500px;
 width: 400px;float: right;
 position: relative;left: 822px;
-position: relative;top: -285px;
+position: relative;top: -310px;
 border-radius: 15%;
-transition: 1s;}
+transition: 1s;
+animation: moveFromTop 3.7s forwards;
+}
+
+
+
 .me:hover .photo{
-opacity: 0.4;
+opacity: 0.4 ;
 filter: blur(3px);
 
 
 }
 .me .photo:hover{
-opacity: 1;
+opacity: 1 ;
 filter: blur(0);
 transform: scale(1.13);
 
 }
 .me:hover .photo2{
-opacity: 0.4;
+opacity: 0.4 ;
 filter: blur(3px);}
 .me .photo2:hover{
-opacity: 1;
+opacity: 2;
 filter: blur(0);
 transform: scale(1.13);
 }
 .menu a:after{
     display: block;
 position: absolute;
-left: 0; /*можна поміняти на  right:0; */
-width: 0;/*довжина лінії до наведення на неї курсора*/
-height: 2px; /*ширина лінії*/
-background-color: #00a650; /*колір лінії*/
+left: 0; 
+width: 0;
+height: 2px; 
+background-color: #00a650; 
 content: "";
-transition: width 0.3s ease-out; /*час для анімації*//*}
+transition: width 0.3s ease-out; }
+
+@keyframes moveFromBottom {
+  0% {
+      /*opacity: 0;*/
+      top: 70vh; /
+  }
+  100% {
+      /*opacity: 1;*/
+      top: 40; /
+  }
+}
+
+@keyframes moveFromTop {
+  0% {
+      /*opacity: 0;*/
+      top: -70vh; /
+  }
+  100% {
+    /* opacity: 1;*/
+      top: 30; 
+  }
+}
 
 @import 'https://fonts.googleapis.com/css?family=Baloo+Paaji';
 
@@ -132,7 +173,7 @@ h1, h2 {
 
   h1 span {
     color: $tertiary-color;
-    animation-delay: 3s;
+    animation-delay: 6.6s !important;
   }
 
   h2 span {
@@ -245,3 +286,19 @@ h2 span {
           transform: rotate(360deg) scale(1.1);
          
 }
+
+
+.section {
+  height: 70%;
+  width: 100%;
+}
+.new-content {
+  height: 100%;
+  background-color: rgb(23, 23, 23);
+  width: 100% !important;
+  height: 600px;
+  margin-top: 650px;
+  width: 100%;
+  color: white;
+  padding: 20px;
+  text-align: center;}

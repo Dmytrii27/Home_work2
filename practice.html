@@ -4,10 +4,45 @@
 </head>
 <body>
    
-   <p id="demo"></p>
-   <button type="button" onclick="myFunction()">Click</button>
-   <script src="./practice_script.js"></script>
-   <script src="./practice2.js"></script>
-  
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+   .container {
+       display: grid;
+       grid-template-rows: 70vh 30vh; /* Перша секція займає 70%, друга - 30% висоти екрану */
+       gap: 20px; /* Простір між секціями */
+   }
+   
+   .section1 {
+       background-color: lightblue;
+       padding: 20px;
+   }
+   
+   .section2 {
+       background-color: lightgreen;
+       padding: 20px;
+   }
+</style>
+<title>Grid Layout Example</title>
+</head>
+<body>
+   <div class="container">
+       <div class="section1">
+           <h2>Перша секція</h2>
+           <p>Зміст першої секції.</p>
+       </div>
+       <div class="section2">
+           <h2>Друга секція</h2>
+           <p>Зміст другої секції.</p>
+       </div>
+   </div>
 </body>
 </html>
