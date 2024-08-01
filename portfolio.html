@@ -63,27 +63,23 @@
 
 <div id="new-content" class="new-content">
   <!-- Інший контент тут (якщо є) -->
-  <div class="swiper-container">
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            <div class="box">Slide 1 Text</div>
-        </div>
-        <div class="swiper-slide">
-            <div class="box">Slide 2 Text</div>
-        </div>
-        <div class="swiper-slide">
-            <div class="box">Slide 3 Text</div>
-        </div>
-        <div class="swiper-slide">
-            <div class="box">Slide 4 Text</div>
-        </div>
-        <div class="swiper-slide">
-            <div class="box">Slide 5 Text</div>
-        </div>
+   <h1 class="Aboutme">About me.</h1>
+   <div id="about">
+    <div class="card" id="card1">
+      <p>Інформація про мене 1 📚</p>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-pagination"></div>
+    <div class="card" id="card2">
+      <p>Інформація про мене 2 🎨</p>
+    </div>
+    <div class="card" id="card3">
+      <p>Інформація про мене 3 🚀</p>
+    </div>
+    <div class="block">
+        <!-- Ваш контент тут -->
+        <a href="#" class="next-page-link">My works</a>
+      </div>
+  </div>
+    
 </div>
 </div>
   
@@ -91,23 +87,31 @@
     
 </div>
 <script>
-  const swiper = new Swiper('.swiper-container', {
-      loop: true,
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      spaceBetween: -100, // Зменшена відстань між слайдами
-      pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-      },
-      navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-      },
-      autoplay: {
-          delay: 5000,
-      },
+const cards = document.querySelectorAll('.card');
+let currentIndex = 0;
+
+// Ініціалізація карток
+cards.forEach((card, index) => {
+  const overlay = document.createElement('div');
+  overlay.classList.add('overlay');
+  card.appendChild(overlay);
+  
+  overlay.addEventListener('click', () => {
+    if (index === currentIndex) {
+      currentIndex = (currentIndex + 1) % cards.length;
+      cards.forEach((c, i) => {
+        c.style.zIndex = i === currentIndex ? 1 : 0;
+        c.style.transform = i === currentIndex ? 'translateX(0)' : `translateX(-40px)`;
+      });
+    }
   });
+});
+
+// Задати початковий стан для першої картки
+cards[currentIndex].style.zIndex = 1;
+cards[currentIndex].style.transform = 'translateX(0)';
+
+
 </script>
 
 </body>

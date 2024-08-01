@@ -44,5 +44,31 @@
            <p>Зміст другої секції.</p>
        </div>
    </div>
+   <script>
+   const cards = document.querySelectorAll('.card');
+let currentIndex = 0;
+
+// Ініціалізація карток
+cards.forEach((card, index) => {
+  const overlay = document.createElement('div');
+  overlay.classList.add('overlay');
+  card.appendChild(overlay);
+  
+  overlay.addEventListener('click', () => {
+    if (index === currentIndex) {
+      currentIndex = (currentIndex + 1) % cards.length;
+      cards.forEach((c, i) => {
+        c.style.zIndex = i === currentIndex ? 1 : 0;
+        c.style.transform = i === currentIndex ? 'translateX(0)' : `translateX(-80px)`;
+      });
+    }
+  });
+});
+
+// Задати початковий стан для першої картки
+cards[currentIndex].style.zIndex = 1;
+cards[currentIndex].style.transform = 'translateX(0)';
+
+   </script>
 </body>
 </html>
