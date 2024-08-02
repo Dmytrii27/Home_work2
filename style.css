@@ -313,23 +313,16 @@ h2 span {
   width: 100% !important;
   height: 600px;
 margin-bottom: 100px !important;
-  
+box-sizing: border-box;
   width: 100%;
   padding: 20px;
-  text-align: center;
+  text-align: center;}
   
   
  
   
   
   
-}
-#new-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
 
 #new-content {
   display: flex;
@@ -365,7 +358,7 @@ margin-bottom: 100px !important;
   padding: 20px;
   box-sizing: border-box;
   transition: transform 1.5s cubic-bezier(0.68, 0.55, 0.27, 1.55), z-index 1.5s, opacity 1.5s;
-  margin-left: -600px !important;
+  margin-left: -500px !important;
   margin-top: 50px !important;
   opacity: 1 !important;
 }
@@ -388,7 +381,7 @@ margin-bottom: 100px !important;
 .next-page-link {
   position: absolute;
   bottom: 130px; /* Відстань від нижнього краю */
-  left: 760px; /* Відстань від лівого краю */
+  left: 805px; /* Відстань від лівого краю */
   text-decoration: none;
   color:azure; /* Колір тексту посилання */
   font-size: 30px;
@@ -406,3 +399,34 @@ margin-bottom: 100px !important;
 .next-page-link:hover {
   background-size: 100% 2px;
   color: white;}
+  .footer {
+    background-color: rgb(7, 7, 7);
+    border-top: 2px solid silver;
+    padding: 1%;
+    width: 100%;
+    margin-top: auto; /* Завжди буде внизу */
+    text-align: left; /* Вирівнювання тексту по центру */
+  }
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+  }
+  
+  .icon:hover {
+    transform: scale(1.2);
+  }
+  #rights {
+    color: azure;
+    margin-left: -14px;
+    position: relative;
+    bottom: -20px;
+   
+  }
