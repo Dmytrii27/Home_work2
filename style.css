@@ -338,7 +338,6 @@ margin-bottom: 100px !important;
   height: 100vh;
 }
 
-
 #about {
   position: relative;
   width: 100%;
@@ -346,8 +345,15 @@ margin-bottom: 100px !important;
   display: flex;
   justify-content: center;
   align-items: center;
- 
-
+    font-size: 22px;
+  
+}
+.skills {
+ margin-left: -600px;
+}
+.skills2 {
+  text-align: left;
+}
 .card {
   position: absolute;
   width: 800px;
@@ -358,16 +364,15 @@ margin-bottom: 100px !important;
   border-radius: 20px;
   padding: 20px;
   box-sizing: border-box;
-  transition: transform 0.3s, z-index 0.3s;
-  transform: translateX(0);
+  transition: transform 1.5s cubic-bezier(0.68, 0.55, 0.27, 1.55), z-index 1.5s, opacity 1.5s;
   margin-left: -600px !important;
   margin-top: 50px !important;
- 
-}
+  opacity: 1 !important;
 }
 
 .card:not(:first-child) {
-  transform: translateX(-40px); /* Збільшено для більшого ефекту віяла */
+  transform: translateX(-50px); /* Збільшено для більшого ефекту віяла */
+  
 }
 
 .overlay {
@@ -380,17 +385,10 @@ margin-bottom: 100px !important;
   background: transparent;
   border-radius: 20px;
 }
-.block {
-  position: relative;
-  padding: 20px; /* Залежно від ваших потреб */
-  border: 1px solid #ccc; /* Просто для видимості */
-  /* Інші стилі вашого блоку */
-}
-
 .next-page-link {
   position: absolute;
-  bottom: -200px; /* Відстань від нижнього краю */
-  left: 250px; /* Відстань від лівого краю */
+  bottom: 130px; /* Відстань від нижнього краю */
+  left: 760px; /* Відстань від лівого краю */
   text-decoration: none;
   color:azure; /* Колір тексту посилання */
   font-size: 30px;
@@ -401,6 +399,7 @@ margin-bottom: 100px !important;
   background-repeat: no-repeat;
   background-size: 0% 2px;
   transition: background-size .3s
+  
  
 }
 

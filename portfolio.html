@@ -60,24 +60,39 @@
     </div>
 </div>
 </div>
-
 <div id="new-content" class="new-content">
-  <!-- Інший контент тут (якщо є) -->
-   <h1 class="Aboutme">About me.</h1>
-   <div id="about">
-    <div class="card" id="card1">
-      <p>Інформація про мене 1 📚</p>
-    </div>
-    <div class="card" id="card2">
-      <p>Інформація про мене 2 🎨</p>
-    </div>
-    <div class="card" id="card3">
-      <p>Інформація про мене 3 🚀</p>
-    </div>
-    <div class="block">
-        <!-- Ваш контент тут -->
-        <a href="#" class="next-page-link">My works</a>
+    <!-- Інший контент тут (якщо є) -->
+    <h1 class="Aboutme">About me.</h1>
+    <div id="about">
+      <div class="card" id="card1">
+        <br></br>
+        <p>🌟 Hello! I have a passion for web design and creating creative websites. My love for technology began with learning HTML and CSS, which helped me understand the fundamentals of structuring and styling web pages. 🎨</p>
+        <p>After that, I mastered JavaScript, which enabled me to add dynamism and interactivity to my projects. 🌐 Since then, I have continuously refined my skills, experimenting with various technologies and tools. 🚀</p>
+        <p>I enjoy creating modern, user-friendly, and visually appealing websites that provide a positive user experience. 😊 Every new project is an opportunity for me to learn something new and apply my knowledge in practice. 💡</p>
       </div>
+      <div class="card" id="card2">
+        <p>🎨 I always strive for creativity and self-expression, which led me to develop an interest in web design. My knowledge of UI and UX allows me to create designs that not only look attractive but are also convenient and efficient to use. 🌟</p>
+        <p>I always keep up with the latest trends in web design, using modern tools and techniques to create visually appealing and functional web applications. 📐 Collaboration with developers enables me to ensure flawless implementation of designs in the final product, including testing, analysis, and optimization. 🛠️</p>
+        <p>My goal is to create user interfaces that not only look great but are also intuitive and easy to use. 🤝 Each project is an opportunity to bring my creativity and innovative ideas to life. 🌟</p>
+      </div>
+      <div class="card" id="card3">
+        <p>🚀 I am constantly striving to improve my skills and learn new technologies. My approach to web application development includes using responsive design to ensure an excellent user experience on any device. 📱 I actively use version control systems, such as Git, to manage my projects. 🗂️</p>
+        <p class="skills"><strong>Skills:</strong></p>
+        <ul class="skills2">
+          <li>HTML & CSS 🌐</li>
+          <li>JavaScript 📜</li>
+          <li>MERN Stack (MongoDB, Express, React, Node.js) 🛠️</li>
+          <li>UI Design 🖌️</li>
+          <li>UX Design 📐</li>
+          <li>Responsive Web Design 📱</li>
+          <li>Version Control (Git) 🗂️</li>
+        </ul>
+      </div>
+      <div class="block">
+        <!-- Ваш контент тут -->
+        <a href="#" class="next-page-link">My works >>></a>
+      </div>
+    </div>
   </div>
     
 </div>
@@ -86,11 +101,35 @@
 
     
 </div>
+
 <script>
 const cards = document.querySelectorAll('.card');
 let currentIndex = 0;
 
-// Ініціалізація карток
+function updateCards() {
+  cards.forEach((card, index) => {
+    if (index === currentIndex) {
+      card.style.zIndex = 2;
+      card.style.transform = 'translateX(0)';
+      card.style.opacity = 1; // Повна видимість для активної картки
+      card.style.filter = 'none'; // Відсутність розмиття для активної картки
+      card.style.transition = 'transform 2.5s ease, opacity 1.5s ease'; // Плавний перехід тільки для opacity та transform
+    } else if ((index === (currentIndex + 1) % cards.length) || (index === (currentIndex + 2) % cards.length)) {
+      card.style.zIndex = 1;
+      card.style.transform = `translateX(-${(index - currentIndex) * 30}px)`;
+      card.style.opacity = 0.2; // Зниження видимості для карток позаду
+      card.style.filter = 'blur(5px)'; // Розмиття карток позаду
+      card.style.transition = 'transform 2.5s ease, opacity 1.5s ease, filter 1.5s ease'; // Плавний перехід
+    } else {
+      card.style.zIndex = 0;
+      card.style.transform = `translateX(-60px)`;
+      card.style.opacity = 0.2; // Зниження видимості для карток позаду
+      card.style.filter = 'blur(5px)'; // Розмиття карток позаду
+      card.style.transition = 'transform 2.5s ease, opacity 1.5s ease, filter 1.5s ease'; // Плавний перехід
+    }
+  });
+}
+
 cards.forEach((card, index) => {
   const overlay = document.createElement('div');
   overlay.classList.add('overlay');
@@ -99,17 +138,15 @@ cards.forEach((card, index) => {
   overlay.addEventListener('click', () => {
     if (index === currentIndex) {
       currentIndex = (currentIndex + 1) % cards.length;
-      cards.forEach((c, i) => {
-        c.style.zIndex = i === currentIndex ? 1 : 0;
-        c.style.transform = i === currentIndex ? 'translateX(0)' : `translateX(-40px)`;
-      });
+      updateCards();
     }
   });
 });
 
-// Задати початковий стан для першої картки
-cards[currentIndex].style.zIndex = 1;
-cards[currentIndex].style.transform = 'translateX(0)';
+// Задати початковий стан для всіх карток
+updateCards();
+
+
 
 
 </script>
