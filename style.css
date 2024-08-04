@@ -391,13 +391,14 @@ box-sizing: border-box;
 .next-page-link:hover {
   background-size: 100% 2px;
   color: white;}
+  
   .footer {
-    background-color: rgb(7, 7, 7);
+    background-color: black;
     border-top: 2px solid silver;
     padding: 0%;
     width: 100%;
-    margin-top: auto; /* Завжди буде внизу */
-    text-align: center; /* Вирівнювання тексту по центру */
+    margin-top: auto; 
+    text-align: center; 
   }
   .social-icons {
     display: flex;
@@ -413,6 +414,14 @@ box-sizing: border-box;
     position: relative;
     bottom: -15px;
   }
+  
+
+#rights {
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
   
   .icon:hover {
     transform: scale(1.2);
