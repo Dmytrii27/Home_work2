@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+ 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
@@ -18,12 +19,17 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
-    
+  <div class="video-container">
+    <video autoplay muted id="bgVideo">
+      <source src="./Untitled design(2).mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+  </video>
+</div>
     <div class="section">
     <section class="header wrap">
         <header class="header">
             <a href="file:///C:/Users/dmytr/Downloads/MERN/Home_work3/Home_work2/portfolio.html">
-                <img class="logo" src="./logo.png.png" >
+              <img class="logo" src="./logo.png.png">
             <nav>
                 <ul class="menu">
                     <li><a href="#new-content">About me</a></li>
@@ -60,6 +66,7 @@
     </div>
 </div>
 </div>
+
 <div id="new-content" class="new-content">
   <video autoplay muted loop id="background-video">
     <source src="./Untitled design.mp4" type="video/mp4">
@@ -146,6 +153,10 @@ cards.forEach((card, index) => {
     }
   });
 });
+
+
+
+
 
 // Задати початковий стан для всіх карток
 updateCards();
