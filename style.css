@@ -10,6 +10,9 @@ margin-left: 0;
 margin-right: 0;
 width: 100%;
 height: 100%;
+width: 100%;
+height: 100%;
+
 }
 html {
   scroll-behavior: smooth;
@@ -293,6 +296,7 @@ h2 span {
   margin-left: 100px;
   position: relative;top: -300px;
   white-space: nowrap;
+ 
 }
 
 
@@ -490,19 +494,14 @@ flex-direction: column;}
   color:azure; /* Колір тексту посилання */
   font-size: 30px;
   white-space: nowrap;
-  color:white ; text-decoration: none;
-  background-image: linear-gradient(currentColor, currentColor);
-  background-position: 0% 100%;
-  background-repeat: no-repeat;
-  background-size: 0% 2px;
-  transition: background-size .3s
+  transition: color .3s;
+    z-index: 2; /* Щоб посилання було над відео */
   
  
 }
 
 .next-page-link:hover {
-  background-size: 100% 2px;
-  color: white;}
+  color: rgb(96, 93, 93);}
   
   .next-page-link2 {
     position: absolute;
@@ -512,19 +511,14 @@ flex-direction: column;}
     color: azure; /* Колір тексту посилання */
     font-size: 30px;
     white-space: nowrap;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .3s;
+    transition: color .3s;
     z-index: 2; /* Щоб посилання було над відео */
   }
   
   .next-page-link2:hover {
-    background-size: 100% 2px;
-    color: white;
+    color: rgb(96, 93, 93); /* Зміна кольору на темніший при наведенні */
   }
-    
+
   .footer {
     background-color: black;
     border-top: 2px solid silver;
@@ -718,17 +712,19 @@ flex-direction: column;}
   .services {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Три стовпці */
-    gap: 20px; /* Відстань між картками */
+    gap: 15px; /* Відстань між картками */
     max-width: 1200px; /* Максимальна ширина контейнера */
   }
   
   .service {
-    background: white;
+    background:  rgb(52, 51, 51);
     padding: 10px; /* Зменшення padding */
     box-sizing: border-box;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     text-align: left; /* Текст вирівняний по лівому краю */
+    width: 300px;
+    height: 280px;
   }
   
   .service img {
@@ -750,7 +746,15 @@ flex-direction: column;}
   }
   
   .progress {
-    background-color: green;
+    background-color: rgba(76, 163, 189, 0.816);
     height: 5px;
     border-radius: 5px;
   }
+ 
+  .new-content, .new-content2, .new-content3 {
+    margin: 0;
+    padding: 20px 0; /* Зменшений padding для секцій */
+  }
+
+  
+ 
