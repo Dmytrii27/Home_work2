@@ -29,9 +29,9 @@
                 <nav>
                     <ul class="menu">
                         <li><a href="#new-content">About me</a></li>
-                        <li><a href="#new-content2">Services</a></li>
-                        <li><a href="#new-content3">Experience</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#new-content3">Services</a></li>
+                        <li><a href="#new-content2">Experience</a></li>
+                        <li><a href="#new-content4">Contact</a></li>
                     </ul>
                 </nav>
             </header>
@@ -156,7 +156,6 @@
     <div id="new-content2" class="new-content2">
         <video autoplay muted loop id="background-video2">
             <source src="./Untitled design(3).mp4" type="video/mp4">
-            Your browser does not support the video tag.
         </video>
         <h1 class="Experience">Experience.</h1>
         <div class="grid-container">
@@ -199,8 +198,41 @@
         </div>
     <div>
     </div>
-    <a href="#" class="next-page-link2"> Contact me <span class="arrow">↓</span></a>
+    <a href="#new-content4" class="next-page-link2"> Contact me <span class="arrow">↓</span></a>
 </div>
+
+<div id="new-content4" class="new-content4">
+    <h1 class="Contactme">Contact me.</h1>
+    <div id="contact-section" class="contact-section">
+        <h1 class="h22">How can I help you?</h1>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+            <form class="contact-form" action="https://formspree.io/f/xanwjoon" method="POST">
+                <input type="text" name="name" placeholder="Your name*" required>
+                <input type="tel" name="phone" placeholder="Your phone*" required>
+                <input type="email" name="_replyto" placeholder="Your email*" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" id="submitButton">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Social Media -->
+        <div class="social-media-wrapper">
+            <div class="social-media">
+                <p>Want to know more or just chat?<br>You are welcome!</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank"><img src="./facebook11.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="./instagram11.png" alt="Instagram"></a>
+                    <a href="https://www.youtube.com" target="_blank"><img src="./linkedin11.png" alt="YouTube"></a>
+                    <a href="https://t.me" target="_blank"><img src="./icons8-github-50.png" alt="Telegram"></a>
+                </div>
+                <p>Like me on<br>Facebook, Instagram, YouTube, Telegram</p>
+            </div>
+        </div>
+    </div>
+</div>
+    
     <script>
         const cards = document.querySelectorAll('.card');
         let currentIndex = 0;
@@ -241,26 +273,25 @@
                 }
             });
         });
+        document.getElementById('contactForm').addEventListener('submit', function() {
+    // Зберігає інформацію про те, що форма була відправлена
+    localStorage.setItem('formSubmitted', 'true');
+});
 
+window.addEventListener('load', function() {
+    // Перевіряє, чи була форма відправлена
+    if (localStorage.getItem('formSubmitted') === 'true') {
+        // Очищує форму після повернення на сторінку
+        document.getElementById('contactForm').reset();
+        // Видаляє індикатор, щоб він не зберігався для майбутніх сесій
+        localStorage.removeItem('formSubmitted');
+    }
+});
         updateCards();
+       
     
     </script>
     <div class="footer">
-        <div class="social-icons">
-            <a href="https://www.instagram.com" target="_blank">
-                <img src="./instagram11.png" alt="Instagram" class="icon">
-            </a>
-            <a href="https://www.linkedin.com" target="_blank">
-                <img src="./linkedin11.png" alt="LinkedIn" class="icon">
-            </a>
-            <a href="https://www.facebook.com" target="_blank">
-                <img src="./facebook11.png" alt="Facebook" class="icon">
-            </a>
-            <a href="https://www.github.com" target="_blank">
-                <img src="./icons8-github-50.png" alt="Github" class="icon">
-            </a>
-        </div>
-    </div>
     <div id="rights">
         Dmytrii Satsiuk &copy; 2024
     </div>
