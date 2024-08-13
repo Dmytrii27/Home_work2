@@ -489,6 +489,51 @@ flex-direction: column;}
   background: transparent;
   border-radius: 20px;
 }
+#about {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
+
+.card {
+  position: absolute;
+  width: 800px;
+  height: 500px;
+  background-color: black;
+  border: 3px solid white;
+  border-radius: 20px;
+  padding: 0; /* Видалення внутрішнього відступу */
+  box-sizing: border-box;
+  transition: transform 1.5s cubic-bezier(0.68, 0.55, 0.27, 1.55), z-index 1.5s, opacity 1.5s;
+  margin-left: -500px !important;
+  margin-top: 50px !important;
+  opacity: 1 !important;
+  overflow: hidden; /* Забезпечує, що зображення не виходить за межі картки */
+}
+
+.card img.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Забезпечує, що зображення покриває всю площу картки */
+  border-radius: 20px; /* Зберігає округлені кути */
+}
+
+#card1 {
+  z-index: 2; 
+}
+
+#card2 {
+  z-index: 1;
+}
+
+.card:not(:first-child) {
+  transform: translateX(-50px); 
+}
+
 .next-page-link {
   position: absolute;
   bottom: 130px; /* Відстань від нижнього краю */
@@ -526,9 +571,9 @@ flex-direction: column;}
     background-color: black;
     border-top: 2px solid silver;
     width: 100%;
-    margin-bottom: -370px;
     text-align: center; 
     padding: 0;
+   
    
   }
  
@@ -685,6 +730,9 @@ flex-direction: column;}
 .new-content3 {
   height: 100%;
   background-color: black;
+  height: 600px;
+  margin-top: -100px !important;
+  box-sizing: border-box;
   width: 100%;
   padding: 20px;
   text-align: center;
@@ -817,7 +865,7 @@ flex-direction: column;}
   background-color: black;
   width: 100% !important;
   height: 600px;
-  margin-bottom: 100px !important;
+  margin-top: -100px !important;
 box-sizing: border-box;
   width: 100%;
   padding: 20px;
@@ -880,7 +928,7 @@ flex-direction: column;}
 }
   .new-content, .new-content2, .new-content3, .new-content4 {
     margin: 0;
-    padding: 20px 0; /* Зменшений padding для секцій */
+    padding:  0; /* Зменшений padding для секцій */
   }
 
 
