@@ -5,16 +5,23 @@ body{background-color: black ;
 margin-left: 0;
 margin-right: 0;
 width: 100%;
-height: 100%;
-width: 100%;
-height: 100%;
+height: 30% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
 
 }
 html {
   scroll-behavior: smooth;
 }
-
-  
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.main-content {
+  flex: 1; /* Це розширить основний контент, залишаючи футер внизу */
+}
 
 .header{
 
@@ -143,13 +150,6 @@ $primary-color: #1e90ff;
 $secondary-color: #ffe221;
 $tertiary-color: #ffffff;
 
-body {
-  font-family: 'Baloo Paaji', cursive;
-  background: $primary-color;
-  display: flex;
-  justify-content: right;
-  align-items: right;
-}
 
 .container {
   width: 200px;
@@ -298,6 +298,7 @@ h2 span {
 
 
 
+
 .new-content {
   height: 100%;
   background-color: black;
@@ -309,18 +310,19 @@ box-sizing: border-box;
   padding: 20px;
   text-align: center;}
   
-  
- 
-  
-  
-  
 
 #new-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-}
+  height: 100vh !important;
+  }
+  
+  
+ 
+  
+  
+
 .new-content2 {
   height: 100%;
   background-color: black;
@@ -577,6 +579,7 @@ flex-direction: column;}
    
   }
  
+ 
   
  
   
@@ -609,6 +612,8 @@ flex-direction: column;}
     height: 100%;
     object-fit: cover;
     z-index: -1; /* Встановлюємо відео позаду всього контенту */
+    margin: 0 !important;
+    padding: 0 !important;
   }
   
   /* Збереження стилів для інших елементів */
@@ -622,6 +627,7 @@ flex-direction: column;}
     height: 100vh;
     overflow: hidden; /* This is important to ensure the video doesn't cause overflow */
     z-index: 0;
+    
   }
   
   #background-video {
@@ -668,17 +674,26 @@ flex-direction: column;}
     object-fit: cover;
     z-index: -1;
   }
- 
+  #background-video4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
    
   .video-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 130%;
+    height: 135%;
     overflow: hidden;
-    z-index: -1;
-}
+    z-index: -1;}
+
+
 #bgVideo {
     position: absolute;
     top: 0;
@@ -777,7 +792,7 @@ flex-direction: column;}
 }
 
 .service {
-  background: black;
+  background: rgba(0, 0, 0, 0.3);;
   border: 3px solid  #040404;
   padding: 10px;
   box-sizing: border-box;
@@ -816,6 +831,8 @@ flex-direction: column;}
 .progress-container {
   margin-left: 10px;
   margin-top: 10px;
+  position: relative;
+  
 }
 
 .progress-bar {
@@ -839,6 +856,7 @@ flex-direction: column;}
   color: #f0f0f0;
   font-size: 12px;
   font-weight: bold;
+ 
 }
 
 .next-page-link3 {
@@ -864,18 +882,34 @@ flex-direction: column;}
   height: 100%;
   background-color: black;
   width: 100% !important;
-  height: 600px;
-  margin-top: -100px !important;
+  height: 720px !important;
+ margin-top: -100px !important;
 box-sizing: border-box;
   width: 100%;
-  padding: 20px;
+  padding: 2px;
   text-align: center;
 flex-direction: column;}
 #new-content4 {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   height: 100vh;}
+ 
+  
+ 
+  
+  .new-content4 {
+    position: relative;
+    overflow: hidden; /* Запобігаємо виходу відео за межі контейнера */
+  }
+  .new-content4 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* This is important to ensure the video doesn't cause overflow */
+    z-index: 0;
+  }
  
   .Contactme {
     color: azure;
@@ -943,7 +977,6 @@ flex-direction: column;}
     justify-content: space-between;
     color: #f0f0f0;
     padding: 100px;
-  
   }
   
   .contact-form-wrapper,
@@ -961,11 +994,19 @@ flex-direction: column;}
   .contact-form input,
   .contact-form textarea {
     width: 100%;
-    padding: 15px;
+    padding: 15px 15px 10px 15px; /* Змінив padding, щоб виглядало гарно з рискою знизу */
     margin-bottom: 15px;
-    border: 3px solid #f0f0f0;
-    border-radius: 5px;
+    border: none;
+    border-bottom: 3px solid #f0f0f0; /* Додає риску знизу */
+    background-color: transparent; /* Видаляє фон */
     font-size: 16px;
+    color: #f0f0f0; /* Колір тексту */
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none; /* Видаляє стандартне виділення при фокусі */
+    border-bottom-color: #ffffff; /* Можна змінити колір риски при фокусі */
   }
   
   .contact-form input::placeholder,
@@ -995,7 +1036,7 @@ flex-direction: column;}
     
   }
   .social-media-wrapper{
-    margin-top: -550px;
+    margin-top: -500px;
     margin-left: 770px;
   }
   
